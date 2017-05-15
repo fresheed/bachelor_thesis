@@ -1,0 +1,54 @@
+% % pathes to used folders
+% \newcommand{\picspath}{./../pics/}
+% \newcommand{\sourcepath}{./../scripts/}
+
+% math shortcuts
+\newcommand{\pinf}{\infty}
+\newcommand{\ninf}{-\infty}
+\newcommand{\isum}{\sum_{\ninf}^{\pinf}}
+\newcommand{\inint}{\int_{\ninf}^{\pinf}}
+
+% args: mark, file relative to sourcepath
+\newcommand{\sourcecode}[2]{ 
+  \lstinputlisting[linerange=#10-#11]{\sourcepath#2} 
+}
+
+% args: desc, file relative to picspath
+\newcommand{\pastepic}[2]{ 
+  % \begin{figure}[H]
+  \begin{figure}[!htb]
+    \noindent
+    \centering
+    \makebox[0pt]{\includegraphics[scale=0.7]{\picspath#2}}
+    \caption{#1}
+  \end{figure}
+}
+
+% args: desc, file relative to picspath
+\newcommand{\pastepicscale}[2]{ 
+  %\begin{figure}[H]
+  \begin{figure}[!htb]
+    \noindent
+    \centering
+    \makebox[0pt]{\includegraphics[width=18cm, height=13cm, keepaspectratio]{\picspath#2}}
+    \caption{#1}
+  \end{figure}
+}
+
+% args: desc, file relative to picspath
+\newcommand{\pastepicbigscale}[2]{ 
+  \begin{figure}[!htb]
+    \noindent
+    \centering
+    \makebox[0pt]{\includegraphics[scale=0.6]{\picspath#2}}
+    \caption{#1}
+  \end{figure}
+}
+
+% args: comment
+\DeclareRobustCommand{\missing}[1]{
+  \colorbox{red}{\Huge{#1}}
+}
+
+
+

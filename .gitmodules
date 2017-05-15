@@ -1,0 +1,3 @@
+[submodule "latex_templates"]
+	path = latex_templates
+	url = https://github.com/ejiek/latex_templates

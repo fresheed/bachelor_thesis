@@ -1,0 +1,13 @@
+*~
+
+*.pdf
+*.toc
+*.log
+*.out
+*.nlo
+*.aux
+auto/
+
+hide_latex.sh
+.hidden
+
