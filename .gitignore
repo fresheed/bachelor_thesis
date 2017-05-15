@@ -8,6 +8,9 @@
 *.aux
 auto/
 
+*.bbl
+*.blg
+
 hide_latex.sh
 .hidden
 
