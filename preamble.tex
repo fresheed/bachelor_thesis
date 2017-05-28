@@ -8,15 +8,18 @@
   openany,
 ]{csse-fcs}
 
+\usepackage{cmap}
 
-\usepackage[russian, english]{babel} % многоязыковая вёрстка
 \usepackage{fontspec}
-\setmainfont{PT Serif}
+\setmainfont[HyphenChar={-}]{PT Serif}
 \setsansfont{PT Sans}
 \setmonofont{Ubuntu Mono} % в PT Mono нет курсива
 
+%\usepackage[russian, english]{babel} % многоязыковая вёрстка
+
 \usepackage{polyglossia} % базовый язык 
-\setdefaultlanguage{russian}
+\setdefaultlanguage[babelshorthands=false,spelling=old]{russian}
+\setotherlanguage{english}
 
 \usepackage{color}
 
