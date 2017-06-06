@@ -109,7 +109,7 @@
   \def\masterprogname{Master's Program}
 \fi
 
-\def\studentlabelcover{\CYRS\cyrt\cyru\cyrd\cyre\cyrn\cyrt\ \groupname\ \@group}
+\def\studentlabelcover{Студент \groupname\ \@group}
 
 \ifundeflength\firstskip{4ex}
 \ifundeflength\secondskip{8ex}
@@ -120,7 +120,8 @@
 
 \newlength{\picsize}
 \settoheight{\picsize}{ \vbox{\@approved} }
-\setlength{\picsize}{\picsize - 4ex}
+%\setlength{\picsize}{\picsize - 4ex} can't get it working
+\setlength{\picsize}{\picsize}
 
 \def\drawlogo{\hfill\includegraphics[height=\picsize]{\@logo}}
 

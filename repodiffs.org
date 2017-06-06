@@ -1,7 +1,10 @@
 * Отличия в репозиториях
 ** политех
 *** определения с CYR...
+    в основном - в csse
+    также - в title_page
 *** парсинг опции titlepage
+*** titlepage - setlength picsize - 4
 ** disser
 *** hyperref
 *** titledefs
