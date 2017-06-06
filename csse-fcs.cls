@@ -164,50 +164,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand\csseabstractname{%
-  %\CYRR\CYRE\CYRF\CYRE\CYRR\CYRA\CYRT
-  TODO: fix REFERAT entry
+  РЕФЕРАТ
 }
 \newcommand\csseabstractnameen{%
   ABSTRACT%
 }
 \newcommand\stats@report{%
-  %\CYRO\cyrt\cyrch\cyre\cyrt%
-  TODO: fix REPORT entry
+  Отчёт
 }
 \newcommand\stats@report@en{%
   Report%
 }
 \newcommand\stats@page{%
-  %\cyrs\cyrt\cyrr.%
-  TODO: fix PAGE entry
+  стр.
 }
 \newcommand\stats@page@en{%
   pages%
 }
 \newcommand\stats@fig{%
-  %\cyrr\cyri\cyrs.%
-  TODO: fix FIG entry
+  рис.
 }
 \newcommand\stats@fig@en{%
   figures%
 }
 \newcommand\stats@table{%
-  %\cyrt\cyra\cyrb\cyrl.%
-  TODO: fix TABLE entry
+  табл.
 }
 \newcommand\stats@table@en{%
   tables%
 }
 \newcommand\stats@cite{%
-  %\cyri\cyrs\cyrt.%
-  TODO: fix CITE entry
+  ист.
 }
 \newcommand\stats@cite@en{%
   references%
 }
 \newcommand\stats@appendix{%
-  %\cyrp\cyrr\cyri\cyrl.%
-  TODO: fix APPENDIX entry
+  прил.
 }
 \newcommand\stats@appendix@en{%
   appendicies%
@@ -428,11 +421,16 @@
 % \city{{\cyr\CYRS\cyra\cyrn\cyrk\cyrt-\CYRP\cyre\cyrt\cyre\cyrr\cyrb\cyru\cyrr\cyrg}}
 % \date{\number\year}
 
-\institution{TODO: fix this hack and set corresponding values; also fix captionsrussian hack (commented out now) }
+%\institution{TODO: check? this hack and set corresponding values; also fix captionsrussian hack (commented out now) }
+\institution{Санкт-Петербургский политехнический университет Петра Великого}
+\faculty{Институт компьютерных наук и технологий}
+\department{Кафедра компьютерных систем и программных технологий}
+\city{Санкт-Петербург}
+\date{\number\year}
 
 
-%\renewcommand{\courselabel}{}
-%\renewcommand{\masterproglabel}{}
+\renewcommand{\courselabel}{}
+\renewcommand{\masterproglabel}{}
 
 % \addto\captionsrussian{%
 %   \renewcommand{\nomname}{\CYRS\CYRP\CYRI\CYRS\CYRO\CYRK\ \CYRO\CYRB\CYRO\CYRZ\CYRN\CYRA\CYRCH\CYRE\CYRN\CYRI\CYRISHRT\ \CYRI\ \CYRS\CYRO\CYRK\CYRR\CYRA\CYRSHCH\CYRE\CYRN\CYRI\CYRISHRT}
@@ -444,6 +442,19 @@
 %   \renewcommand{\figurename}{\CYRR\cyri\cyrs\cyru\cyrn\cyro\cyrk}
 %   \renewcommand{\tablename}{\CYRT\cyra\cyrb\cyrl\cyri\cyrc\cyra}
 % }
+
+\addto\captionsrussian{
+  \renewcommand{\nomname}{СПИСОК ОБОЗНАЧЕНИЙ И СОКРАЩЕНИЙ}
+  \renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+  \renewcommand{\introname}{ВВЕДЕНИЕ}
+  \renewcommand{\conclusionname}{ЗАКЛЮЧЕНИЕ}
+  \renewcommand{\bibname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+  \renewcommand{\appendixname}{ПРИЛОЖЕНИЕ}
+  \renewcommand{\figurename}{Рисунок}
+  \renewcommand{\tablename}{Таблица}
+}
+
+
 
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
@@ -497,8 +508,8 @@
   justification=raggedleft}
 % \floatname{figure}{\CYRR\cyri\cyrs\cyru\cyrn\cyro\cyrk}
 % \floatname{table}{\CYRT\cyra\cyrb\cyrl\cyri\cyrc\cyra}
-\floatname{figure}{TODO: fix FIGURE name}
-\floatname{table}{TODO: fix TABLE name}
+\floatname{figure}{Рисунок}
+\floatname{table}{Таблица}
 
 
 % Workaround for disser-1.2.0 `headcenter` pagestyle options
