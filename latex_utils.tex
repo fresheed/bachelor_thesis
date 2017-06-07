@@ -14,13 +14,14 @@
 }
 
 % args: desc, file relative to picspath
-\newcommand{\pastepic}[2]{ 
+\newcommand{\pastepic}[3]{ 
   % \begin{figure}[H]
   \begin{figure}[!htb]
     \noindent
     \centering
     \makebox[0pt]{\includegraphics[scale=0.7]{\picspath#2}}
     \caption{#1}
+    \label{fig:#3}
   \end{figure}
 }
 

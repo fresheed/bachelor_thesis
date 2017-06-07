@@ -1,6 +1,6 @@
 \input{preamble}
 \input{latex_utils}
-\newcommand{\picspath}{./pics/}
+\newcommand{\picspath}{./}
 
 \begin{document}
 
@@ -16,15 +16,16 @@
 \makenomenclature
 \printnomenclature
 
-%\input{introduction/introduction.tex}
 \input{introduction/introduction.tex}
-\input{introduction/area_review.tex}
-\input{introduction/existing_review.tex}
+\input{introduction/introduction.tex}
 
-\input{algorithms/algorithms.tex}
+\input{introduction/area_review.tex}
+
+\input{design/design.tex}
+
 % implementation
 % results
-\input{conclusion.tex}
+%\input{conclusion.tex}
 
 \bibliography{sources,introduction/sources}
 \bibliographystyle{ugost2008} 
@@ -33,6 +34,8 @@
 % ...
 
 \missing{изменить шрифт на требуемый}
+
+\missing{исправить двойной дефис}
 
 \missing{сделать стандартные введение и заключение}
 
