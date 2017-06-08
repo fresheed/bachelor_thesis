@@ -15,7 +15,6 @@
 
 % args: desc, file relative to picspath
 \newcommand{\pastepic}[3]{ 
-  % \begin{figure}[H]
   \begin{figure}[!htb]
     \noindent
     \centering
@@ -26,25 +25,24 @@
 }
 
 % args: desc, file relative to picspath
-\newcommand{\pastepicscale}[2]{ 
-  %\begin{figure}[H]
-  \begin{figure}[!htb]
-    \noindent
-    \centering
-    \makebox[0pt]{\includegraphics[width=18cm, height=13cm, keepaspectratio]{\picspath#2}}
+\newcommand{\pastepicthree}[5]{ 
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.3\linewidth}
+      \center{\includegraphics[width=1\linewidth]{#2}}
+    \end{minipage}
+    %\hfill
+    \begin{minipage}[h]{0.3\linewidth}
+      \center{\includegraphics[width=1\linewidth]{#3}}
+    \end{minipage}
+    %\hfill
+    \begin{minipage}[h]{0.3\linewidth}
+      \center{\includegraphics[width=1\linewidth]{#4}}
+    \end{minipage}
     \caption{#1}
+    \label{fig:#5}
   \end{figure}
 }
 
-% args: desc, file relative to picspath
-\newcommand{\pastepicbigscale}[2]{ 
-  \begin{figure}[!htb]
-    \noindent
-    \centering
-    \makebox[0pt]{\includegraphics[scale=0.6]{\picspath#2}}
-    \caption{#1}
-  \end{figure}
-}
 
 % args: comment
 \DeclareRobustCommand{\missing}[1]{
