@@ -1,0 +1,251 @@
+0: Experiment: WaveletsFeaturesExtractor -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  1  1]
+ [ 1 12  0  0]
+ [ 0  0 16  1]
+ [ 0  0  2 26]]
+Accuracy: 0.909091
+F1 score: 0.894365
+Best params: {'transformer__wavelet_type': 'rbio3.1'}
+Fit time: 4.635445 seconds
+Score time: 0.189358 seconds
+
+1: Experiment: RawExtractor -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  2  0]
+ [ 1 12  0  0]
+ [ 0  0 16  1]
+ [ 0  0  2 26]]
+Accuracy: 0.909091
+F1 score: 0.892580
+Best params: {}
+Fit time: 2.715373 seconds
+Score time: 0.063094 seconds
+
+2: Experiment: SignalInterpolator -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  1  1]
+ [ 1 12  0  0]
+ [ 0  0 14  3]
+ [ 0  2  1 25]]
+Accuracy: 0.863636
+F1 score: 0.853642
+Best params: {}
+Fit time: 3.737298 seconds
+Score time: 0.154851 seconds
+
+3: Experiment: HMMABOutExtractor -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  1  1  0]
+ [ 1 12  0  0]
+ [ 0  0 15  2]
+ [ 0  4  1 23]]
+Accuracy: 0.848485
+F1 score: 0.837569
+Best params: {'transformer__num_states': 4, 'transformer__covariance_type': 'full'}
+Fit time: 15.269514 seconds
+Score time: 3.439894 seconds
+
+4: Experiment: RawExtractor -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  1  1]
+ [ 0 12  1  0]
+ [ 0  0 12  5]
+ [ 1  0  4 23]]
+Accuracy: 0.803030
+F1 score: 0.813183
+Best params: {}
+Fit time: 0.067146 seconds
+Score time: 0.019240 seconds
+
+5: Experiment: SignalInterpolator -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  1  1]
+ [ 0 12  1  0]
+ [ 0  0 12  5]
+ [ 2  0  5 21]]
+Accuracy: 0.772727
+F1 score: 0.785076
+Best params: {}
+Fit time: 0.124344 seconds
+Score time: 0.029748 seconds
+
+6: Experiment: WaveletsFeaturesExtractor -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  2  0]
+ [ 0 12  1  0]
+ [ 0  0 15  2]
+ [ 2  6  2 18]]
+Accuracy: 0.772727
+F1 score: 0.771251
+Best params: {'transformer__wavelet_type': 'rbio3.1'}
+Fit time: 0.242806 seconds
+Score time: 0.056014 seconds
+
+7: Experiment: HMMABOutExtractor -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  1  1  0]
+ [ 1  7  0  5]
+ [ 0  2 13  2]
+ [ 2  3  2 21]]
+Accuracy: 0.712121
+F1 score: 0.695556
+Best params: {'transformer__num_states': 3, 'transformer__covariance_type': 'full'}
+Fit time: 9.572341 seconds
+Score time: 2.072839 seconds
+
+8: Experiment: STFTCoeffsExtractor -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 4  2  2  0]
+ [ 3  9  1  0]
+ [ 0  4 10  3]
+ [ 0  1  3 24]]
+Accuracy: 0.712121
+F1 score: 0.658203
+Best params: {}
+Fit time: 2.945409 seconds
+Score time: 0.204780 seconds
+
+9: Experiment: HMMABOutExtractor -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  1  1]
+ [ 0  6  1  6]
+ [ 0  0 13  4]
+ [ 2  4  4 18]]
+Accuracy: 0.651515
+F1 score: 0.656385
+Best params: {'transformer__num_states': 3, 'transformer__covariance_type': 'full'}
+Fit time: 9.090040 seconds
+Score time: 2.152247 seconds
+
+10: Experiment: STFTCoeffsExtractor -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 5  0  2  1]
+ [ 5  7  1  0]
+ [ 0  1 14  2]
+ [ 1  3  6 18]]
+Accuracy: 0.666667
+F1 score: 0.636086
+Best params: {}
+Fit time: 0.624887 seconds
+Score time: 0.137942 seconds
+
+11: Experiment: FFTCoeffsExtractor -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 2  3  1  2]
+ [ 2  9  1  1]
+ [ 1  0 14  2]
+ [ 3  2  4 19]]
+Accuracy: 0.666667
+F1 score: 0.601048
+Best params: {}
+Fit time: 0.946452 seconds
+Score time: 0.047458 seconds
+
+12: Experiment: FFTCoeffsExtractor -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 0  4  1  3]
+ [ 1 10  0  2]
+ [ 0  1 15  1]
+ [ 1  1  2 24]]
+Accuracy: 0.742424
+F1 score: 0.593596
+Best params: {}
+Fit time: 0.154802 seconds
+Score time: 0.036449 seconds
+
+13: Experiment: SpectrumInterpolator -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 0  4  1  3]
+ [ 1 10  0  2]
+ [ 0  1 15  1]
+ [ 1  1  2 24]]
+Accuracy: 0.742424
+F1 score: 0.593596
+Best params: {}
+Fit time: 0.197492 seconds
+Score time: 0.051237 seconds
+
+14: Experiment: STFTCoeffsExtractor -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 3  3  1  1]
+ [ 5  7  1  0]
+ [ 0  3 10  4]
+ [ 0  3  2 23]]
+Accuracy: 0.651515
+F1 score: 0.581087
+Best params: {}
+Fit time: 0.389244 seconds
+Score time: 0.096501 seconds
+
+15: Experiment: SpectrumInterpolator -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 4  2  2  0]
+ [ 4  6  0  3]
+ [ 0  0 15  2]
+ [ 8  1  4 15]]
+Accuracy: 0.606061
+F1 score: 0.573315
+Best params: {}
+Fit time: 0.198041 seconds
+Score time: 0.051119 seconds
+
+16: Experiment: SpectrumInterpolator -> MLPClassifier
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 1  3  1  3]
+ [ 3  9  1  0]
+ [ 1  0 12  4]
+ [ 4  1  2 21]]
+Accuracy: 0.651515
+F1 score: 0.571807
+Best params: {}
+Fit time: 0.978728 seconds
+Score time: 0.051579 seconds
+
+17: Experiment: RawExtractor -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  2  0]
+ [ 1  4  1  7]
+ [ 0  5  7  5]
+ [ 1  3  2 22]]
+Accuracy: 0.590909
+F1 score: 0.565609
+Best params: {}
+Fit time: 0.070416 seconds
+Score time: 0.018234 seconds
+
+18: Experiment: SignalInterpolator -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  2  0]
+ [ 1  4  1  7]
+ [ 0  5  7  5]
+ [ 1  3  2 22]]
+Accuracy: 0.590909
+F1 score: 0.565609
+Best params: {}
+Fit time: 0.184146 seconds
+Score time: 0.062450 seconds
+
+19: Experiment: WaveletsFeaturesExtractor -> LinearDiscriminantAnalysis
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 6  0  2  0]
+ [ 1  4  1  7]
+ [ 0  5  7  5]
+ [ 1  3  2 22]]
+Accuracy: 0.590909
+F1 score: 0.565609
+Best params: {'transformer__wavelet_type': 'rbio2.2'}
+Fit time: 0.330224 seconds
+Score time: 0.147845 seconds
+
+20: Experiment: FFTCoeffsExtractor -> GaussianNB
+Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+[[ 4  1  2  1]
+ [ 5  5  0  3]
+ [ 0  0 15  2]
+ [ 8  2  3 15]]
+Accuracy: 0.590909
+F1 score: 0.554812
+Best params: {}
+Fit time: 0.145083 seconds
+Score time: 0.033511 seconds

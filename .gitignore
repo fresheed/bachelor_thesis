@@ -6,6 +6,7 @@
 *.out
 *.nlo
 *.aux
+*.pyc
 auto/
 
 *.bbl

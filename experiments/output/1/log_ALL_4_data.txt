@@ -1,0 +1,30 @@
+/home/fresheed/research/diploma/ActivityClassifier/parse/raw_logs//egor_logs.tar.gz: 38 log files, 376 chunks
+pushups: 65 chunks
+walk: 125 chunks
+pullups: 90 chunks
+sits: 96 chunks
+
+/home/fresheed/research/diploma/ActivityClassifier/parse/raw_logs/misha_logs.tar.gz: 103 log files, 152 chunks
+pushups: 24 chunks
+walk: 67 chunks
+pullups: 28 chunks
+sits: 33 chunks
+
+/home/fresheed/research/diploma/ActivityClassifier/parse/raw_logs//max_logs.tar.gz: 66 log files, 65 chunks
+pushups: 18 chunks
+walk: 25 chunks
+sits: 22 chunks
+
+/home/fresheed/research/diploma/ActivityClassifier/parse/raw_logs/andrew_logs.tar.gz: 6 log files, 77 chunks
+pushups: 21 chunks
+walk: 22 chunks
+pullups: 16 chunks
+sits: 18 chunks
+
+Total:
+pushups: 128 chunks
+walk: 239 chunks
+pullups: 134 chunks
+sits: 169 chunks
+train/test: 469/201
+Configs to run:

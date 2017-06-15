@@ -1,0 +1,1 @@
+/home/fresheed/research/diploma/thesis/log_parser/log_parsing.py
