@@ -13,6 +13,23 @@ tranlsations={
     "walk": "Ходьба"
 }
 
+estimators_translations={
+    "FFTCoeffsExtractor": "Выделение коэффициентов быстрого преобразования Фурье",
+    "STFTCoeffsExtractor": "Выделение коэффициентов оконного преобразования Фурье",
+    "HMMABOutExtractor": "Выделение параметров скрытой марковской модели",
+    "HMMOutCovarsExtractor": "Выделение параметров распределений скрытой марковской модели, описывающих наблюдаемые состояния",
+    "RawExtractor": "Использование значений ряда как признаков",
+    "SignalInterpolator": "Использование коэффициентов аппроксимирующих сплайнов как признаков",
+    "MultiARFeatureExtractor": "Вычисление параметров модели временного ряда",
+    "SpectrumInterpolator": "Использование коэффициентов сплайнов, аппроксимирующих спектр, как признаков",
+    "WaveletsFeaturesExtractor": "Выделение коэффициентов дискретного-вейвлет преобразования",
+    "DTWTransformer": "Применение алгоритма динамического преобразования времени для определения расстояния между рядами",
+    "KNeighborsClassifier": "применение метода k ближайших соседей",    
+    "MLPClassifier": "применение нейронной сети прямого распространения",
+    "GaussianNB": "применение наивного байесовского классификатора",
+    "LinearDiscriminantAnalysis": "применение линейного дискриминантного анализа"
+}
+
 
 def parse_file(all_lines):
     lines=list(filter(None, all_lines))
@@ -36,12 +53,12 @@ def parse(entry_lines):
     return PrintData(name, classes, confmat, accuracy, f1, fit_time, score_time)
 
 
-def to_latex(parsed, prefix, caption):
+def to_latex(parsed, prefix, _):
     table=get_content(parsed)
     # full_latex=wrap(,
     #                 "table", r"[\tableopts]")
     tabular=wrap(table, "tabular", r"{\tableformat}")
-    caption=get_caption(parsed, prefix, caption)
+    caption=get_caption(parsed, prefix)
     full=wrap("\n".join([tabular, caption]), "table", r"[\tableopts]")
     return full
 
@@ -49,7 +66,7 @@ def to_latex(parsed, prefix, caption):
 def get_latex_table(parsed):
     names=[tranlsations[eng] for eng in parsed.classes]
     to_line=lambda content: content+r" \\ \hline"
-    header=to_line(" & ".join([r"{}", ]+names))
+    header=r" \hline"+to_line(" & ".join([r"{}", ]+names))
     data=""
     def get_line(input):
         num, cls=input
@@ -61,7 +78,7 @@ def get_latex_table(parsed):
 
 
 def get_stats(num, name, value, postfix):
-    tpl=r"\multicolumn{%d}{c}{%s: %f%s} \\ \hline"
+    tpl=r"\multicolumn{%d}{|c|}{%s: %f%s} \\ \hline"
     return tpl % (num, name, value, postfix)
 
 
@@ -95,10 +112,12 @@ def wrap(text, env, params_str):
     return "\n".join([first_line, text, last_line])
 
 
-def get_caption(parsed, prefix, text):
+def get_caption(parsed, prefix):
+    extractor, classifier=parsed.experiment_name.split("_")
+    names=estimators_translations[extractor]+", "+estimators_translations[classifier]
     return r"\caption{\label{table:%s_%s} %s}" % (prefix, 
                                                   parsed.experiment_name,
-                                                  text)
+                                                  names)
 
 
 def parse_name(line):

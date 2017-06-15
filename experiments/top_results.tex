@@ -1,0 +1,104 @@
+% 0: Experiment: WaveletsFeaturesExtractor -> MLPClassifier
+% Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+% [[31  0  0  1]
+%  [ 6 21  1  1]
+%  [ 1  0 38  3]
+%  [ 0  0  0 59]]
+% Accuracy: 0.919753
+% F1 score: 0.905834
+% Best params: {'transformer__wavelet_type': 'rbio3.1'}
+% Score time: 0.294791 seconds
+
+\newcommand{\tableopts}{H}
+
+
+\begin{table}[\tableopts]
+\begin{tabular}{ | l | c | c | c | r | }
+  {} & Подтягивания & Отжимания  & Приседания & Ходьба \\ \hline
+  Подтягивания & 31 & 0 & 0 & 1 \\ \hline
+  Отжимания  &   6 & 21 & 1 & 1 \\ \hline
+  Приседания &   1 & 0 & 38 & 3 \\ \hline
+  Ходьба &       0 & 0 & 0 & 59 \\ \hline
+  \multicolumn{5}{c}{ Точность: 0.919753} \\ \hline
+  \multicolumn{5}{c}{ Значение F-метрики: 0.905834} \\ \hline
+  \multicolumn{5}{c}{ Время классификации: 0.294791 с} \\ \hline
+\end{tabular}  
+\caption{\label{table:wavelets_results} Результаты классификации с применением вейвлет-преобразования}
+\end{table}
+
+
+
+% 1: Experiment: SignalInterpolator -> MLPClassifier
+% Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+% [[30  2  0  0]
+%  [ 6 21  1  1]
+%  [ 1  0 38  3]
+%  [ 0  1  0 58]]
+% Accuracy: 0.907407
+% F1 score: 0.889742
+% Best params: {}
+% Score time: 0.203369 seconds
+\begin{table}[\tableopts]
+\begin{tabular}{ | l | c | c | c | r | }
+  {} & Подтягивания & Отжимания  & Приседания & Ходьба \\ \hline
+  Подтягивания & 30 & 2 & 0 & 0 \\ \hline
+  Отжимания  &   6 & 21 & 1 & 1 \\ \hline
+  Приседания &   1 & 0 & 38 & 3 \\ \hline
+  Ходьба &       0 & 1 & 0 & 58 \\ \hline
+  \multicolumn{5}{c}{ Точность: 0.907407} \\ \hline
+  \multicolumn{5}{c}{ Значение F-метрики: 0.889742} \\ \hline
+  \multicolumn{5}{c}{ Время классификации: 0.203369 с} \\ \hline
+\end{tabular}  
+\caption{\label{table:interp_results} Результаты классификации с использованием коэффициентов аппроксимирующих сплайнов}
+\end{table}
+
+
+% 2: Experiment: RawExtractor -> MLPClassifier
+% Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+% [[30  2  0  0]
+%  [ 6 21  1  1]
+%  [ 1  0 37  4]
+%  [ 0  1  0 58]]
+% Accuracy: 0.901235
+% F1 score: 0.884459
+% Best params: {}
+% Score time: 0.286919 seconds
+\begin{table}[\tableopts]
+\begin{tabular}{ | l | c | c | c | r | }
+  {} & Подтягивания & Отжимания  & Приседания & Ходьба \\ \hline
+  Подтягивания & 30 & 2 & 0 & 0 \\ \hline
+  Отжимания  &   6 & 21 & 1 & 1 \\ \hline
+  Приседания &   1 & 0 & 37 & 4 \\ \hline
+  Ходьба &       0 & 1 & 0 & 58 \\ \hline
+  \multicolumn{5}{c}{ Точность: 0.901235} \\ \hline
+  \multicolumn{5}{c}{ Значение F-метрики: 0.884459} \\ \hline
+  \multicolumn{5}{c}{ Время классификации: 0.286919 с} \\ \hline
+\end{tabular}  
+\caption{\label{table:raw_results} Результаты классификации с использованием значений ряда как признаков}
+\end{table}
+
+
+% 3: Experiment: HMMABOutExtractor -> MLPClassifier
+% Confusion for ['pullups' 'pushups' 'sits' 'walk']:
+% [[31  1  0  0]
+%  [ 5 20  1  3]
+%  [ 1  0 36  5]
+%  [ 0  2  0 57]]
+% Accuracy: 0.888889
+% F1 score: 0.874632
+% Best params: {'transformer__covariance_type': 'full', 'transformer__num_states': 3}
+% Score time: 9.836717 seconds
+\begin{table}[\tableopts]
+\begin{tabular}{ | l | c | c | c | r | }
+  {} & Подтягивания & Отжимания  & Приседания & Ходьба \\ \hline
+  Подтягивания & 31 & 1 & 0 & 0 \\ \hline
+  Отжимания  &   5 & 20 & 1 & 3 \\ \hline
+  Приседания &   1 & 0 & 36 & 5 \\ \hline
+  Ходьба &       0 & 2 & 0 & 57 \\ \hline
+  \multicolumn{5}{c}{ Точность: 0.888889} \\ \hline
+  \multicolumn{5}{c}{ Значение F-метрики: 0.874632} \\ \hline
+  \multicolumn{5}{c}{ Время классификации: 9.836717 с} \\ \hline
+\end{tabular}  
+\caption{\label{table:raw_results} Результаты классификации с использованием параметров скрытой марковской модели}
+\end{table}
+
